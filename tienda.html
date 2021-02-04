@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Antonio Jesus Cid Triviño">
+    <link rel="stylesheet" href="estilosTienda.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">    <link rel="stylesheet" href="estilosTienda.css.css">
+    <script src="tienda.js"></script>
+    <title>Tienda</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Tienda</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="tienda.html">Principal <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.amazon.es/">Amazon</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Antonio Jesus
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="carrito.html">Carrito</a>
+                <a class="dropdown-item" href="tienda.html">Seguir comprando</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Configuracion</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="carrito.html">Carrito</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+          </form>
+        </div>
+      </nav>
+      <div class="row header">
+        <div class=" col-10 col-sm-10 col-md-4 col-lg-4 col-xl-4">
+            <img src="carrito.png" alt="">
+        </div>
+        <div class="col-10 col-sm-10 col-md-4 col-lg-4 col-xl-4">
+            <a id="carrito1">Total productos: 0</a>
+            
+        </div>
+        <div class="col-10 col-sm-10 col-md-4 col-lg-4 col-xl-4">
+            
+            <a id="carrito2">Precio total: 0</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-10 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+            <div class="card" style="width: 18rem;" id="zapatos" value="59.99">
+                <img class="card-img-top" src="zapatos.jpg" alt="Card image cap">
+                <div class="card-body">
+                <h5 class="card-title">LEATHER - Zapatos con cordones</h5>
+                </br>
+                <div class="fila">
+                  <p class="card-text">59,99 €</p>
+                  <p class="card-text" id="nZapatos">0</p>
+                </div>
+                <a type="button" class="btn btn-warning" onclick="anadir('zapatos', 59.99)">Añadir al carrito</a>
+                </br></br>
+                <a type="button" class="btn btn-warning" onclick="quitar('zapatos', 59.99)">Quitar del carrito</a>
+                </div>
+            </div>
+        </div>  
+        <div class="col-10 col-sm-6 col-md-4 col-lg-4 col-xl-4"> 
+            <div class="card" style="width: 18rem;" id="sudadera" value="36.95">
+                <img class="card-img-top" src="sudadera.jpg" alt="Card image cap">
+                <div class="card-body">
+                <h5 class="card-title">CORE ELEVEN FOOTBALL HODDIE SWEAT - Jersey con capucha</h5>
+                <div class="fila">
+                  <p class="card-text">36,95 €</p>
+                  <p class="card-text" id="nSudaderas">0</p>
+                </div>
+                <a type="button" class="btn btn-warning" onclick="anadir('sudadera',36.95)">Añadir al carrito</a>
+                </br></br>
+                <a type="button" class="btn btn-warning" onclick="quitar('sudadera', 36.95)">Quitar del carrito</a>
+                </div>
+            </div>
+      </div>
+      <div class="col-10 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+            <div class="card" style="width: 18rem;" id="pantalon" value="55.95">
+                <img class="card-img-top" src="pantalon.jpg" alt="Card image cap">
+                <div class="card-body">
+                <h5 class="card-title">ALPHA ORIGINAL - Pantalones</h5>
+              </br>
+                <div class="fila">
+                  <p class="card-text">55,95 €</p>
+                  <p class="card-text" id="nPantalones">0</p>
+                </div>
+                <a type="button" class="btn btn-warning" onclick="anadir('pantalon',55.95)">Añadir al carrito</a>
+                </br></br>
+                <a type="button" class="btn btn-warning" onclick="quitar('pantalon', 55.95)">Quitar del carrito</a>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-10 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+            <div class="card" style="width: 18rem;" id="camisa" value="42.45">
+                <img class="card-img-top" src="camisa.jpg" alt="Card image cap">
+                <div class="card-body">
+                <h5 class="card-title">BOYS OXFORD - Camisa</h5>
+              </br>
+                <div class="fila">
+                  <p class="card-text">42,45 €</p>
+                  <p class="card-text" id="nCamisas">0</p>
+                </div>
+                <a type="button" class="btn btn-warning" onclick="anadir('camisa', 42.45)">Añadir al carrito</a>
+                </br></br>
+                <a type="button" class="btn btn-warning" onclick="quitar('camisa', 42.45)">Quitar del carrito</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-10 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+            <div class="card" style="width: 18rem;" id="calcetines" value="11.95">
+                <img class="card-img-top" src="calcetines.jpg" alt="Card image cap">
+                <div class="card-body">
+                <h5 class="card-title">EVERYDAY CUSH CREW 3 PACK</h5>
+                <div class="fila">
+                  <p class="card-text">11,95 €</p>
+                  <p class="card-text" id="nCalcetines">0</p>
+                </div>
+                <a type="button" class="btn btn-warning" onclick="anadir('calcetines', 11.95)">Añadir al carrito</a>
+                </br></br>
+                <a type="button" class="btn btn-warning" onclick="quitar('calcetines', 11.95)">Quitar del carrito</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-10 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+            <div class="card" style="width: 18rem;" id="camiseta" value="12.99">
+                <img class="card-img-top" src="camiseta.jpg" alt="Card image cap">
+                <div class="card-body">
+                <h5 class="card-title">NOOS - Camiseta básica</h5>
+              </br>
+                <div class="fila"> 
+                  <p class="card-text">12,99 €</p>
+                  <p class="card-text" id="nCamisetas">0</p>
+                </div>
+                <a type="button" class="btn btn-warning" onclick="anadir('camiseta', 12.99)">Añadir al carrito</a>
+                </br></br>
+                <a type="button" class="btn btn-warning" onclick="quitar('camiseta', 12.99)">Quitar del carrito</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer1">
+            <a class="pointer">Información</a>
+            <a class="pointer">Bog</a>
+            <a class="pointer">Empleo</a>
+            <a class="pointer">Ayuda</a>
+            <a class="pointer">API</a>
+            <a class="pointer">Privacidad</a>
+            <a class="pointer">Condiciones</a>
+            <a class="pointer">Páginas asociadas</a>
+            <a class="pointer">Formas de pago</a>
+            <a class="pointer">Ubicaciones</a>
+        </div>
+        <div class="footer2">
+            <a class="pointer">Belleza</a>
+            <a class="pointer">Danza y espectáculos</a>
+            <a class="pointer">Fitness</a>
+            <a class="pointer">Comida y bebida</a>
+            <a class="pointer">Hogar y jardinería</a>
+            <a class="pointer">Música</a>
+            <a class="pointer">Artes visuales</a>
+        </div>
+        <div class="footer3">
+            <a class="pointer">Español</a>
+            <a class="pointer">&copy; 2021 Antonio Jesús Cid Triviño</a>
+        </div>
+    </footer>
+</body>
+</html>

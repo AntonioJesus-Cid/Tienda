@@ -1,0 +1,56 @@
+
+.card{
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    margin-right: 50px;
+}
+
+.footer{
+    color: rgb(173, 173, 173);
+    text-align: center;
+    padding: 20px;
+}
+
+.footer1{
+    padding-top: 60px;
+}
+
+.footer2{
+    padding-top: 6px;
+}
+
+.footer3{
+    padding-top: 20px;
+}
+
+.pointer:hover{
+    cursor: pointer;
+}
+a{
+    padding: 10px;
+    font-size: 13px;
+}
+
+#carrito1{
+    font-size: 25px;
+    font-weight: bold;
+    
+}
+
+#carrito2{
+    font-size: 25px;
+    font-weight: bold;
+    
+}
+
+.header{
+    margin-top: 30px;
+}
+
+.fila{
+    margin-left: 10x;
+    display: flex;
+    justify-content: space-between;
+    align-content: center ;
+}
